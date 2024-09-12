@@ -13,9 +13,8 @@ fn main() {
 
         let mut guess = String::new();
 
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Не получилось прочитать строку");
+        let msg = "He получилось прочитать строку";
+        io::stdin().read_line(&mut guess).expect(msg);
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
